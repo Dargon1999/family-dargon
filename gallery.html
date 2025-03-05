@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Игровая Семья Family Dargon - Фотогалерея</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="overlay"></div>
+    <header>
+        <nav class="fixed-nav">
+            <ul>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="team.html">Состав</a></li>
+                <li><a href="join.html">Заявка в семью</a></li>
+                <li><a href="contact.html">Связь с лидером</a></li>
+                <li><a href="gallery.html">Фотогалерея</a></li>
+                <li class="user-icon">
+                    <svg id="userIcon" onclick="showLoginModal()" width="30" height="30" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="12" cy="12" r="11" stroke="#fff" stroke-width="2"/>
+                        <path d="M12 6a3 3 0 1 0 0 6 3 3 0 0 0 0-6zm-4 10v2h8v-2a4 4 0 0 0-8 0z" fill="#fff"/>
+                    </svg>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="gallery">
+            <h1>Фотогалерея</h1>
+            <div id="adminControls" style="display: none;">
+                <button id="addMediaBtn" onclick="addMedia()">+</button>
+            </div>
+            <div class="gallery-grid" id="galleryGrid">
+                <!-- Элементы галереи будут добавляться сюда -->
+            </div>
+        </section>
+    </main>
+
+    <!-- Модальное окно для входа -->
+    <div id="loginModal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <span class="close" onclick="closeLoginModal()">×</span>
+            <h2>Вход</h2>
+            <input type="text" id="username" placeholder="Логин" required>
+            <input type="password" id="password" placeholder="Пароль" required>
+            <button onclick="login()">Войти</button>
+            <p id="loginStatus"></p>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2025 Семья Family Dargon. Все права защищены.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
